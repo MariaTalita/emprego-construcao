@@ -1,0 +1,47 @@
+---
+title: "Índice de Emprego Formal na Construção Civil"
+author: "Maria Talita Carvalho Franco"
+format: html
+editor: visual
+---
+
+## Explicação da variável
+
+O Índice do Emprego Formal na Construção Civil é uma métrica que mede a evolução do número de trabalhadores com carteira assinada no setor da construção civil, um dos segmentos mais sensíveis e estratégicos da economia brasileira. Esse índice é fundamental por diversas razões. A construção civil é um setor fortemente ligado ao ciclo econômico, reagindo rapidamente a mudanças na política econômica, nas taxas de juros, no crédito imobiliário e nos investimentos públicos e privados. Portanto, o índice de emprego formal reflete a saúde econômica do país, sendo um termômetro para o nível de atividade econômica.
+
+```{r, eval=FALSE, echo=FALSE}
+# Código usado para gerar o gif, mas não será executado nem mostrado no documento
+# library(GetBCBData)
+# library(tidyverse)
+# library(gganimate)
+# library(gifski)
+# library(transformr)
+# library(lubridate)
+# 
+# my.id <- c(emprego_construcao = 25255)
+# df.emprego <- gbcbd_get_series(id = my.id,
+#                                first.date = '2003-01-01',
+#                                last.date = Sys.Date(),
+#                                format.data = 'long')
+# df.emprego <- df.emprego %>%
+#   mutate(ano = lubridate::year(ref.date))
+# grafico_animado <- ggplot(df.emprego, aes(x = ref.date, y = value)) +
+#   geom_line(color = "#0072B2") +
+#   labs(
+#     title = "Índice de Emprego Formal - Construção Civil",
+#     subtitle = "Ano: {frame_time}",
+#     x = "Data",
+#     y = "Índice",
+#     caption = "Fonte: Banco Central do Brasil (SGS - código 25255)"
+#   ) +
+#   theme_minimal(base_size = 13) +
+#   transition_time(ano) +
+#   shadow_mark()
+# anim_save("grafico_emprego.gif", grafico_animado, width = 800, height = 500, duration = 10)
+```
+
+![](grafico_emprego.gif)
+
+## Explicação do gráfico
+
+O gráfico apresenta a trajetória do índice de emprego formal na construção civil de 2003 até hoje, evidenciando a relação direta desse setor com a conjuntura econômica do país. Até 2013, o emprego formal cresceu de forma contínua, impulsionado por um cenário econômico favorável e investimentos na construção. Entre 2014 e 2016, o setor sofreu uma queda acentuada devido à crise econômica brasileira, que provocou redução de obras e demissões. A partir de 2017, o índice mostrou sinais de recuperação, ainda que lenta e irregular. Em 2020, a pandemia de COVID-19 gerou uma nova queda significativa, refletindo paralisações e impactos na atividade econômica. Nos anos seguintes, o índice tem apresentado estabilização e lenta retomada, indicando um cenário de recuperação gradual no emprego formal da construção civil.
